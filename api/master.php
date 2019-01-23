@@ -24,7 +24,7 @@
 <body>
 
 <!-- removed animate bottom -->
-
+#
 <!-- NAVBAR on big screens-->
 <div class="w3-top">
   <div class="w3-bar w3-dark-grey" id="myNavbar">
