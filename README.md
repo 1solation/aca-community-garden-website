@@ -1,2 +1,3 @@
 # aca-community-garden-website
-Project for the Ajnabi Community Association community garden project
+A website for the ```Ajnabi Community Association``` community garden project
+This website will showcase the work Ajnabi Community Association have done and highlights their funding partners.
