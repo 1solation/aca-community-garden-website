@@ -1,9 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>ACA Garden</title>
+<title>ACA Garden</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="stylistic.css">
 </head>
 <body>
-<p>hi testy testy</p>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large"
+        onclick="w3_close()">Close &times;</button>
+            <a href="#" class="w3-bar-item w3-button">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+    <div id="main">
+    <div class="w3-main">
+    <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+    
+    <!-- Add a background color and large text to the whole page -->
+    <div class="w3-sand w3-grayscale w3-large">
+
+    <!--header text-->
+    <header class="w3-container w3-center w3-padding-32"> 
+    <h1><b>ACA Garden</b></h1>
+    <p><span class="w3-tag">Where strangers become friends</span></p>
+    </header>
+    </div>
+        
+    <!--slideshow start-->
+    <div class="slideshow-container">
+
+
+    <div class="mySlides fade">
+    <div class="numbertext">1 / 6</div>
+    <img src="img/2019.jpg" style="width:100%">
+    <div class="text"><span class="w3-tag">New year, new faces!</span></div>
+    </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">2 / 6</div>
+    <img src="img/homepage11.JPG" style="width:100%">
+    <div class="text"><span class="w3-tag">Greenhouse full to the brim!</span></div>
+    </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">3 / 6</div>
+    <img src="img/misc2.jpg" style="width:100%">
+    <div class="text"><span class="w3-tag">The pond area in summer</span></div>
+    </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">4 / 6</div>
+    <img src="img/misc19.JPG" style="width:100%">
+    <div class="text"><span class="w3-tag">Who doesn't love grapes?</span></div>
+    </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">5 / 6</div>
+    <img src="img/misc8.jpg" style="width:100%">
+    <div class="text"><span class="w3-tag">And strawberries?</span></div>
+    </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">6 / 6</div>
+    <img src="img/plants6.jpg" style="width:100%">
+    <div class="text"><span class="w3-tag">They have to start from something...</span></div>
+    </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span>
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    </div>
+
+    <!-- About Container -->
+    <div class="w3-container" id="about">
+        <div class="w3-content" style="max-width:700px">
+        <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT US</span></h5>
+        <p>Welcome to <b>Ajnabi Garden</b> where strangers become friends. We are a group
+            of local people working together for a common goal to work as a community: to grow
+            colourful flowers, fruit and vegetables. The community garden started in 2006
+            with just two members and with initial assistance from Rochdale
+            council's environmental team it enabled us to clean the dumping area.</p>
+        <p>We are a group of local residents who work together to learn and grow plants for
+                use within the community and the community garden. We started with just two
+                volunteers who were interested in growing and helping the environment but had no
+                experience.</p>
+                
+        <p>Our aim is to encourage people to learn new skills within the garden whether it is
+                the community garden or their own garden. We encourage people within the garden
+                to take care of the environment, promote healthy life style and to encourage people
+                from diverse backgrounds to communicate and work together.</p>
+        <div class="w3-panel w3-leftbar w3-light-grey">
+            <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+            <p>Chef, Coffeeist and Owner: Liam Brown</p>
+        </div>
+        <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+        <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+        <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+        </div>
+    </div>      
+
+
+<!--start js for side nav-->
+<script>
+    function w3_open() {
+    document.getElementById("main").style.marginLeft = "25%";
+    document.getElementById("mySidebar").style.width = "25%";
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("openNav").style.display = 'none';
+    }
+    function w3_close() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("openNav").style.display = "inline-block";
+    }
+</script>
+<!--end js for side nav-->
+<!--start js for auto slides-->
+<script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3500); // Change image every 2 seconds
+    }
+</script>
+<!--end js for auto slides-->
 </body>
 </html>
