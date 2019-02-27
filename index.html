@@ -16,7 +16,7 @@
 *TODO
 *TODO
 * add pop up at end saying use the menu to quickly jump to sections of our website
-**
+** OR add buttons to jump to next section with little scrolling animation ********
 *
 *
 *
@@ -28,8 +28,10 @@
             <a href="#about" class="w3-bar-item w3-button">About Us</a>
             <a href="#volunteers" class="w3-bar-item w3-button">Our Volunteers</a>
             <a href="#Our_Story" class="w3-bar-item w3-button">Our Story</a>
-            <a href="#volunteers" class="w3-bar-item w3-button">link4</a>
-            <a href="#volunteers" class="w3-bar-item w3-button">link5</a>
+            <a href="#big_clean_up" class="w3-bar-item w3-button">Big Clean Up</a>
+            <a href="#what_we_do" class="w3-bar-item w3-button">What We Do</a>
+            <a href="#our_funding" class="w3-bar-item w3-button">Our Funding</a>
+            <a href="#get_involved" class="w3-bar-item w3-button">Get Involved</a>
     </div>
     <div id="main">
     <div class="w3-main">
@@ -117,7 +119,6 @@
                 from diverse backgrounds to communicate and work together.</p>
         </div>
     </div>   
-    add 2 original volunteer cards half half
  <!-- Container (Volunteers Section) -->
  <div class="w3-content w3-container w3-padding-64" id="volunteers">
         <h3 class="w3-center"><span class="w3-tag">OUR VOLUNTEERS</span></h3>
@@ -202,7 +203,7 @@
                         <li>Car tyres</li>
                         <li>Huge amounts of building rubble</li>
                         <li>Overgrown shrubs</li>
-                        <li>The infamous <b>kitchen sink</b></li>
+                        <li>A <b>kitchen sink</b></li>
                     </ul>
                 </p>
             <p> To start with we had to pick the small amounts of asbestos out by hand. Over time we discovered more and more asbestos however
@@ -223,14 +224,25 @@
                         <li>Tool storage and work area</li>
                     </ul>
                     </p>
-            <p>Our aim is to encourage people to learn new skills within the garden whether it is
-                    the community garden or their own garden. We encourage people within the garden
-                    to take care of the environment, promote healthy life style and to encourage people
-                    from diverse backgrounds to communicate and work together.</p>
             </div>
-        </div>   
+        </div>
+        <!-- cards of original 2
+        <div class="w3-container">
+            <div class="w3-card-4 w3-black" style="width:40%">
+            <div class="w3-container w3-center">
+                <h5>Person1</h5>
+                <img src="img/derek1.JPG" style="width:80%">
+            </div>
+            </div>
+            <div class="w3-card-4 w3-black" style="width:40%">
+            <div class="w3-container w3-center">
+                <h5>Person2</h5>
+                <img src="img/abdul1.jpg" style="width:80%">
+            </div>
+            </div>
+        </div> -->
         <!-- Container (Our Story Section) -->
-        <div class="w3-content w3-container w3-padding-64" id="work">
+        <div class="w3-content w3-container w3-padding-64" id="big_clean_up">
           <h3 class="w3-center"><span class="w3-tag">THE BIG CLEAN UP</span></h3>
           <p class="w3-center"><em>Here is some of what we found while cleaning up.<br> Click on the images to make them full screen</em></p><br>
             
@@ -249,12 +261,62 @@
             </div>
         
             <div class="w3-col m3">
-              <img src="img/before4.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="And cleared the surrounding area that was grown with weeds">
+              <img src="img/before4.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="And cleared the surrounding area that was grown with weeds.">
             </div>
           </div>
           </div>
         </div>
-            
+      <!--What We Do Container-->
+      <div class="w3-container" id="what_we_do">
+            <div class="w3-content" style="max-width:700px">
+            <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">WHAT WE DO IN THE COMMUNITY GARDEN</span></h3>
+            <p>We propagate seeds which have been collected the previous year and also seed
+                    from packets which we have bought either to try new flower Varity and the ones
+                    which cannot be collected (i.e. spinach, corn, lettuce, cucumber, and courgette).
+                    We carry out all stages of propagation from sowing seeds in the electric propagator
+                    (to encourage the germination process) to potting the small seedlings to grow them
+                    on until they are ready to be planted outside.
+            </p>
+            <p> During the year, we take cutting from some of the plants that we cannot grow from
+                    seeds, dip them in rooting compound and plant them into compost until roots stat to
+                    form. These are then potted on until they are suitable to be planted outside and
+                    spare plant are given away to members and local residences.</p>
+            <p> We have a small fish pond with few goldfish which are developing and using it to
+                    show pond and fish care.
+            </p>
+            <p> We grow plants such as:
+                <div class="row">
+                        <div class="column">
+                            <ul>
+                                    <li>Marigolds of different varieties</li>
+                                    <li>Tulips</li>
+                                    <li>Dahlias</li>
+                                    <li>Grapevines</li>
+                                    <li>Roses of various colours</li>
+                                    <li>Fruit trees; Plumbs, Apple, Pear</li>
+                                    <li>Hydrangeas</li>
+                                    <li>Raspberries</li>
+                                    <li>Strawberries</li>
+                                </ul>
+                        </div>
+                        <div class="column">
+                            <ul>
+                                    <li>Daffodils</li>
+                                    <li>Snow Drops</li>
+                                    <li>Lilies</li>
+                                    <li>A variety of Zinnias</li>
+                                    <li>Begonias</li>
+                                    <li>Mint of different variety</li>
+                                    <li>Onions and Garlic</li>
+                                    <li>Runner Beans</li>
+                                    <li>Potatoes</li>
+                                </ul>
+                        </div>
+                        </div>
+                    </p>
+            </div>
+            <!--plant images - diff contrasting animation on scroll-->
+        </div>            
          <!-- enable w3 modal for full size images on click-->
         <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
           <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
@@ -262,6 +324,7 @@
             <img id="img01" class="w3-image">
             <p id="caption" class="w3-opacity w3-large"></p>
           </div>
+          <!--TODO: ADD MODAL IMAE GALLERY, OR ON SCROLL IMAGES.-->
         </div>
 
 <!--start js for side nav-->
@@ -313,5 +376,19 @@ captionText.innerHTML = element.alt;
 }
 </script>
 <!--end image gallery-->
+<!--start on scroll nav bar button-->
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+// window.onscroll = function() {scrollFunction()};
+
+// function scrollFunction() {
+//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     document.getElementById("mySidebar").style.top = "0";
+//     } else {
+//     document.getElementById("mySidebar").style.top = "-50px";
+//     }
+// }
+// </script>
+<!--end on scroll nav bar button-->
 </body>
 </html>
