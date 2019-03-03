@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>ACA Garden</title>
+<title>poop</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="stylistic.css">
 </head>
 <body>
     <!--*
     *
 *
-**
-*TODO
-*TODO
-* add pop up at end saying use the menu to quickly jump to sections of our website
-** OR add buttons to jump to next section with little scrolling animation ********
-*
-*
-*
+*TODO* hide extra long pics on mobile devices, where the images stack ontop of each other.
+*TODO* add pop up at end saying use the menu to quickly jump to sections of our website **************
+*TODO* OR add buttons to jump to next section with little scrolling animation ********
+*TODO* add loading animation for 2-5 seconds to let pictures load;
+*           Possible black background whitetext to be consistent with overall theme
 **
 -->
-    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
-        <button class="w3-bar-item w3-button w3-large"
-        onclick="w3_close()">Close &times;</button>
-            <a href="#about" class="w3-bar-item w3-button">About Us</a>
-            <a href="#volunteers" class="w3-bar-item w3-button">Our Volunteers</a>
-            <a href="#Our_Story" class="w3-bar-item w3-button">Our Story</a>
-            <a href="#big_clean_up" class="w3-bar-item w3-button">Big Clean Up</a>
-            <a href="#what_we_do" class="w3-bar-item w3-button">What We Do</a>
-            <a href="#our_funding" class="w3-bar-item w3-button">Our Funding</a>
-            <a href="#get_involved" class="w3-bar-item w3-button">Get Involved</a>
-    </div>
-    <div id="main">
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-left w3-xxlarge" style="display:none;padding-top:150px;left:0;z-index:2" id="mySidebar">
+        <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topleft" style="padding:0 12px;">
+          <i class="fa fa-remove"></i>
+        </a>
+        <div class="w3-bar-block w3-center">
+            <a href="#home" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+            <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+            <a href="#volunteers" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Our Volunteers</a>
+            <a href="#Our_Story" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Our Story</a>
+            <a href="#big_clean_up" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Big Clean Up</a>
+            <a href="#what_we_do" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">What We Do</a>
+            <a href="#funding" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Funding</a>
+            <a href="#get_involved" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Get Involved</a>
+        </div>
+      </nav>
+<div id="main">
     <div class="w3-main">
-    <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
-    
-    <!-- Add a background color and large text to the whole page -->
-    <div class="w3-sand w3-grayscale w3-large">
+ <!-- Menu icon to open sidebar -->
+ <button id="openNav" class="w3-button w3-top w3-black w3-xlarge" style="width:auto;left:0" onclick="openNav()">&#9776;</button>
+ <!-- Add a background color and large text to the whole page -->
+    <div class="w3-large">
 
     <!--header text-->
-    <header class="w3-container w3-center w3-padding-32"> 
+    <header class="w3-container w3-center w3-padding-32" id="home"> 
     <h1><b>ACA Garden</b></h1>
     <p><span class="w3-tag">Where strangers become friends</span></p>
     </header>
@@ -119,6 +122,7 @@
                 from diverse backgrounds to communicate and work together.</p>
         </div>
     </div>   
+
  <!-- Container (Volunteers Section) -->
  <div class="w3-content w3-container w3-padding-64" id="volunteers">
         <h3 class="w3-center"><span class="w3-tag">OUR VOLUNTEERS</span></h3>
@@ -161,7 +165,7 @@
           </div>
         </div>
 
-        <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-row-padding w3-center w3-section" id="extra-pics">
             <div class="w3-col m3">
                 <img src="img/getinvolved17.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Getting to roast some potatoes.">
             </div>
@@ -179,8 +183,7 @@
             </div>
             </div>
       </div>
-      
-          
+       
        <!-- enable w3 modal for full size images on click-->
       <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
         <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
@@ -326,22 +329,20 @@
           </div>
           <!--TODO: ADD MODAL IMAE GALLERY, OR ON SCROLL IMAGES.-->
         </div>
-
-<!--start js for side nav-->
+</div>
+<!--start js for nav-->
 <script>
-    function w3_open() {
-    document.getElementById("main").style.marginLeft = "25%";
-    document.getElementById("mySidebar").style.width = "25%";
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("openNav").style.display = 'none';
-    }
-    function w3_close() {
-    document.getElementById("main").style.marginLeft = "0%";
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("openNav").style.display = "inline-block";
-    }
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
 </script>
-<!--end js for side nav-->
+<!--end js for nav-->
 <!--start js for auto slides-->
 <script>
     var slideIndex = 0;
@@ -361,13 +362,13 @@
         }
         slides[slideIndex-1].style.display = "block";  
         dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 3500); // Change image every 2 seconds
+        setTimeout(showSlides, 3500); // Change image every 3.5 seconds
     }
 </script>
 <!--end js for auto slides-->
 <!--start image gallery-->
 <script>
-    //Modal Image Gallery
+//Modal Image Gallery
 function onClick(element) {
 document.getElementById("img01").src = element.src;
 document.getElementById("modal01").style.display = "block";
@@ -376,19 +377,40 @@ captionText.innerHTML = element.alt;
 }
 </script>
 <!--end image gallery-->
-<!--start on scroll nav bar button-->
+<!--start smooth scroll-->
 <script>
-// When the user scrolls down 20px from the top of the document, slide down the navbar
-// window.onscroll = function() {scrollFunction()};
+// let mainNavLinks = document.querySelectorAll("nav ul li a");
+// let mainSections = document.querySelectorAll("main section");
 
-// function scrollFunction() {
-//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     document.getElementById("mySidebar").style.top = "0";
+// let lastId;
+// let cur = [];
+
+// // This should probably be throttled.
+// // Especially because it triggers during smooth scrolling.
+// // https://lodash.com/docs/4.17.10#throttle
+// // You could do like...
+// // window.addEventListener("scroll", () => {
+// //    _.throttle(doThatStuff, 100);
+// // });
+// // Only not doing it here to keep this Pen dependency-free.
+
+// window.addEventListener("scroll", event => {
+//   let fromTop = window.scrollY;
+
+//   mainNavLinks.forEach(link => {
+//     let section = document.querySelector(link.hash);
+
+//     if (
+//       section.offsetTop <= fromTop &&
+//       section.offsetTop + section.offsetHeight > fromTop
+//     ) {
+//       link.classList.add("current");
 //     } else {
-//     document.getElementById("mySidebar").style.top = "-50px";
+//       link.classList.remove("current");
 //     }
-// }
+//   });
+// });
 // </script>
-<!--end on scroll nav bar button-->
+<!--end smooth scroll-->
 </body>
 </html>
