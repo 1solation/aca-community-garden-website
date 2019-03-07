@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>poop</title>
+<title>ACA Garden</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -18,7 +18,7 @@
 *TODO* OR add buttons to jump to next section with little scrolling animation ********
 *TODO* add loading animation for 2-5 seconds to let pictures load;
 *           Possible black background whitetext to be consistent with overall theme
-**
+** https://css-tricks.com/slide-in-as-you-scroll-down-boxes/ 
 -->
 <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
 <nav class="w3-sidebar w3-black w3-animate-left w3-xxlarge" style="display:none;padding-top:150px;left:0;z-index:2" id="mySidebar">
@@ -46,7 +46,7 @@
     <!--header text-->
     <header class="w3-container w3-center w3-padding-32" id="home"> 
     <h1><b>ACA Garden</b></h1>
-    <p><span class="w3-tag">Where strangers become friends</span></p>
+    <p><span class="w3-tag">Where strangers become friends</span></p>     
     </header>
     </div>
         
@@ -249,26 +249,25 @@
           <h3 class="w3-center"><span class="w3-tag">THE BIG CLEAN UP</span></h3>
           <p class="w3-center"><em>Here is some of what we found while cleaning up.<br> Click on the images to make them full screen</em></p><br>
             
-          <!-- Responsive Grid of images -->
-          <div class="w3-row-padding w3-center">
-            <div class="w3-col m3">
-              <img src="img/before1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Heaps of rubbish all over the allotment.">
-            </div>
-        
-            <div class="w3-col m3">
-              <img src="img/before2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Was someone was saving this for a rainy day?">
-            </div>
-        
-            <div class="w3-col m3">
-              <img src="img/before3.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="We removed a lot of household waste.">
-            </div>
-        
-            <div class="w3-col m3">
-              <img src="img/before4.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="And cleared the surrounding area that was grown with weeds.">
-            </div>
+        <!-- Responsive Grid of images -->
+        <div class="w3-row-padding w3-center">
+                <div class="w3-col m3">
+                    <img src="img/before1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Heaps of rubbish all over the allotment.">
+                </div>
+            
+                <div class="w3-col m3">
+                    <img src="img/before3.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="We removed a lot of household waste.">
+                </div>
+            
+                <div class="w3-col m3">
+                    <img src="img/before4.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="And cleared the surrounding area that was grown with weeds.">
+                </div>
+                                
+                <div class="w3-col m3">
+                        <img src="img/cleanup2.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Heavy machinery for a heavy job.">
+                    </div>
+                </div>
           </div>
-          </div>
-        </div>
       <!--What We Do Container-->
       <div class="w3-container" id="what_we_do">
             <div class="w3-content" style="max-width:700px">
@@ -318,18 +317,31 @@
                         </div>
                     </p>
             </div>
-            <!--plant images - diff contrasting animation on scroll-->
         </div>            
-         <!-- enable w3 modal for full size images on click-->
-        <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-          <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-          <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-            <img id="img01" class="w3-image">
-            <p id="caption" class="w3-opacity w3-large"></p>
-          </div>
-          <!--TODO: ADD MODAL IMAE GALLERY, OR ON SCROLL IMAGES.-->
-        </div>
-</div>
+         <!-- Plant imgs -->
+         <div class="w3-content w3-container w3-padding-64">
+                <h3 class="w3-center"><span class="w3-tag">plants</span></h3>
+                <p class="w3-center"><em>Here is just some of the plants in our community garden.<br> Click on the images to make them full screen</em></p><br>
+                  
+                <!-- Responsive Grid of images -->
+                <div class="w3-row-padding w3-center">
+                  <div class="w3-col m3">
+                    <img src="img/before1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Heaps of rubbish all over the allotment.">
+                  </div>
+              
+                  <div class="w3-col m3">
+                    <img src="img/before3.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="We removed a lot of household waste.">
+                  </div>
+              
+                  <div class="w3-col m3">
+                    <img src="img/before4.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="And cleared the surrounding area that was grown with weeds.">
+                  </div>
+                                
+                  <div class="w3-col m3">
+                        <img src="img/cleanup2.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Heavy machinery for a heavy job">
+                      </div>
+                </div>
+                </div>
 <!--start js for nav-->
 <script>
 // Open and close sidebar
