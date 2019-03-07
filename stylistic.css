@@ -82,7 +82,7 @@ button {
 } */
 /* hide long images on mobile/tablet */
 @media only screen and (min-width: 0px) and (max-width: 450px) {
-    #extra-pics {
+    .m4 {
         display: none
     }
 }
@@ -111,5 +111,11 @@ clear: both;
     width: 100%;
 }
 }
-/* dasjlkashflkasjflsadjk hlfskhgjkslufhgdjks.ff*/
+.site-footer { 	
+    background: #9a9a9a; 
+}   
+#footer{
+    margin-left:2%;
+    float:centre;
+}
 </style>
