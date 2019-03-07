@@ -8,6 +8,18 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="stylistic.css">
+<style>
+/* footer style in header, not working in .css file */
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+</style>
 </head>
 <body>
     <!--*
@@ -415,7 +427,7 @@
                             equipment for the community garden.</p>
                         <!-- Responsive Singular Image -->
                         <div class="w3-row-padding w3-center">
-                            <img src="img/eon-energy-logo.jpg" style="width:35%" alt="eON Energy logo.">
+                            <img src="img/eon-energy-logo.jpg" style="width:30%" alt="eON Energy logo.">
                         </div>
                     </div>
                 </div>
@@ -424,9 +436,10 @@
 <!--end div main-->
 </div>
 <!--footer-->
-<footer id="site-footer">
-    <div id="footer"><p><span class="w3-tag">&copy;Ajnabi Community Association 2019 </span></p></div>
-</footer>
+<br>
+<div class="footer">
+    <p>&copy; Ajnabi Community Association 2019</p>
+</div>
 <!--start js for nav-->
 <script>
 // Open and close sidebar
