@@ -68,6 +68,35 @@ html {
 #myDiv {
   display: none;
 }
+.arrowBounce {
+    animation: bounce 2s infinite;
+    color: #000000;
+    font-size: 22px;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+.arrowBounceUp {
+    animation: bounceUp 2s infinite;
+    color: #000000;
+    font-size: 22px;
+}
+@keyframes bounceUp {
+    60% {
+        transform: translateY(10px);
+    }
+    40% {
+        transform: translateY(5px);
+    }
+}
 /* */
 /* */
 /* */
@@ -127,6 +156,7 @@ html {
     <header class="w3-container w3-center w3-padding-32" id="home"> 
     <h1><b>ACA Garden</b></h1>
     <p><span class="w3-tag">Where strangers become friends</span></p>
+    <div class="arrowBounce"><a href="#about"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></div>
     </header>
     </div>
         
@@ -185,7 +215,10 @@ html {
     <!-- About Container -->
     <div class="w3-container" id="about">
         <div class="w3-content" style="max-width:700px">
-        <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT US</span></h3>
+        <h3 class="w3-center w3-padding-32"><span class="w3-tag w3-wide">ABOUT US</span></h3>
+        <div class="w3-container w3-center">
+            <div class="arrowBounce"><a href="#volunteers"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></div>
+        </div>
         <p>Welcome to <b>Ajnabi Garden</b> where strangers become friends. We are a group
             of local people working together for a common goal to work as a community: to grow
             colourful flowers, fruit and vegetables. The community garden started in 2006
@@ -204,8 +237,11 @@ html {
     </div>   
 
  <!-- Container (Volunteers Section) -->
- <div class="w3-content w3-container w3-padding-64" id="volunteers">
+ <div class="w3-content w3-container w3-padding-32" id="volunteers">
         <h3 class="w3-center"><span class="w3-tag">OUR VOLUNTEERS</span></h3>
+        <div class="w3-container w3-center">
+                <div class="arrowBounce"><a href="#Our_Story"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></div>
+        </div>
         <p class="w3-center"><em>Here are some pictures captured of some of the volunteers.<br>Click on the images to make them full screen</em></p><br>
           
         <!-- Responsive Grid of images -->
@@ -276,7 +312,10 @@ html {
       <!--Our Story Container-->
     <div class="w3-container" id="Our_Story">
             <div class="w3-content" style="max-width:700px">
-            <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">OUR STORY</span></h3>
+            <h3 class="w3-center w3-padding-32"><span class="w3-tag w3-wide">OUR STORY</span></h3>
+            <div class="w3-container w3-center">
+                    <div class="arrowBounce"><a href="#big_clean_up"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></div>
+            </div>
             <p>Before the project started, the land was used as a local dumping ground. We found all kinds
                     of rubbish, everything <b>and</b> the kitchen sink. Things we found are:
                     <ul>
@@ -325,8 +364,11 @@ html {
             </div>
         </div> -->
         <!-- Container (Our Story Section) -->
-        <div class="w3-content w3-container w3-padding-64" id="big_clean_up">
+        <div class="w3-content w3-container w3-padding-32" id="big_clean_up">
           <h3 class="w3-center"><span class="w3-tag">THE BIG CLEAN UP</span></h3>
+          <div class="w3-container w3-center">
+                <div class="arrowBounce"><a href="#what_we_do"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></div>
+            </div>
           <p class="w3-center"><em>Here is some of what we found while cleaning up.<br> Click on the images to make them full screen</em></p><br>
             
         <!-- Responsive Grid of images -->
@@ -351,7 +393,10 @@ html {
       <!--What We Do Container-->
       <div class="w3-container" id="what_we_do">
             <div class="w3-content" style="max-width:700px">
-            <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">WHAT WE DO IN THE COMMUNITY GARDEN</span></h3>
+            <h3 class="w3-center w3-padding-32"><span class="w3-tag w3-wide">WHAT WE DO IN THE COMMUNITY GARDEN</span></h3>
+            <div class="w3-container w3-center">
+                    <div class="arrowBounce"><a href="#our_plants"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></div>
+            </div>
             <p>We propagate seeds which have been collected the previous year and also seed
                     from packets which we have bought either to try new flower Varity and the ones
                     which cannot be collected (i.e. spinach, corn, lettuce, cucumber, and courgette).
@@ -399,8 +444,11 @@ html {
             </div>
         </div>            
          <!-- Plant imgs -->
-         <div class="w3-content w3-container w3-padding-64" id="our_plants">
+         <div class="w3-content w3-container w3-padding-32" id="our_plants">
                 <h3 class="w3-center"><span class="w3-tag">OUR PLANTS</span></h3>
+                <div class="w3-container w3-center">
+                        <div class="arrowBounce"><a href="#funding"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></div>
+                </div>
                 <p class="w3-center"><em>Here is just some of the plants in our community garden.<br> Click on the images to make them full screen</em></p><br>
                   
                 <!-- Responsive Grid of images -->
@@ -454,10 +502,13 @@ html {
                                 </div>
                 </div>
             </div>
-            <!--Our Story Container-->
+            <!--Our Funding Container-->
             <div class="w3-container" id="funding">
                     <div class="w3-content" style="max-width:700px">
-                    <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">FUNDING</span></h3>
+                    <h3 class="w3-center w3-padding-32"><span class="w3-tag w3-wide">FUNDING</span></h3>
+                    <div class="w3-container w3-center">
+                            <div class="arrowBounce"><a href="#get_involved"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></div>
+                    </div>
                     <p>As the time progressed, the community garden started to develop realised that we
                             needed funding to help support the projects within the community garden. We
                             initially approached the local council who were more than happy to help local
@@ -496,10 +547,13 @@ html {
                         </div>
                     </div>
                 </div>
-                <!--get Involved Container-->
+                <!--Get Involved Container-->
                 <div class="w3-container" id="get_involved">
                         <div class="w3-content" style="max-width:700px">
-                        <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">GET INVOLVED</span></h3>
+                        <h3 class="w3-center w3-padding-32"><span class="w3-tag w3-wide">GET INVOLVED</span></h3>
+                        <div class="w3-container w3-center">
+                                <div class="arrowBounceUp"><a href="#home"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div>
+                        </div>
                         <p>ADD MORE TEXT HERE ABOUT GETTING INVOLVED HELPING OUT ETC QUICK SMALL PARAGRAPH</p>
                         <p>If you need any aditional information or have any questions, <a href="https://www.facebook.com/HomeOfAjnabiGardens/">join us over on <i class="fa fa-facebook-official" aria-hidden="true"></i></a>
                              or get in touch via email at: email@email.com </p>
