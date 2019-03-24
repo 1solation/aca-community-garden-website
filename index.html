@@ -9,11 +9,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="stylistic.css">
 <style>
-/* smooth scroll in header, not working in .css file */
+/* some style elements added into the index.html file, not working when in the .css file */
+/* enable smooth scroll of the site */
 html {
   scroll-behavior: smooth;
 }
-/* footer style in header, not working in .css file */
+/* add style to the footer to keep it consistent with overall theme */
 .footer {
     left: 0;
     bottom: 0;
@@ -23,7 +24,6 @@ html {
     text-align: center;
     padding: 16px;
 }
-/* stuff */
 /* Center the loader */
 #loader {
   position: absolute;
@@ -65,6 +65,7 @@ html {
   from{ bottom:-100px; opacity:0 } 
   to{ bottom:0; opacity:1 }
 }
+/* hide content when loader is showing */
 #myDiv {
   display: none;
 }
@@ -97,37 +98,12 @@ html {
         transform: translateY(5px);
     }
 }
-/* */
-/* */
-/* */
-/* */
-/* */
-/* */
-/* */
-/* */
-/* */
-/* */
-/* */
-/* */
-/* */
-/* */
 </style>
 </head>
 <body onload="myFunction()" style="margin:0;">
     <div id="loader"><span></span></div>
     <div style="display:none;" id="myDiv" class="animate-bottom">
-    <!--*
-    *
-*
-*TODO* hide extra long pics on mobile devices, where the images stack ontop of each other.
-*TODO* add pop up at end saying use the menu to quickly jump to sections of our website **************
-*TODO* OR add buttons to jump to next section with little scrolling animation ********
-*TODO* add loading animation for 2-5 seconds to let pictures load;
-*           Possible black background whitetext to be consistent with overall theme
-** https://css-tricks.com/slide-in-as-you-scroll-down-boxes/ 
-** w3 refrences (e.g: w3-hide-small)
-** https://www.w3schools.com/w3css/w3css_references.asp
--->
+
 <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
 <nav class="w3-sidebar w3-black w3-animate-left w3-xxlarge" style="display:none;padding-top:150px;left:0;z-index:2" id="mySidebar">
         <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topleft" style="padding:0 12px;">
@@ -145,6 +121,7 @@ html {
             <a href="#contact_us" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact Us</a>
         </div>
       </nav>
+
 <div id="main">
     <div class="w3-main">
  <!-- Menu icon to open sidebar -->
@@ -162,7 +139,6 @@ html {
         
     <!--slideshow start-->
     <div class="slideshow-container">
-
 
     <div class="mySlides fade">
     <div class="numbertext">1 / 6</div>
@@ -223,20 +199,19 @@ html {
             of local people working together for a common goal to work as a community: to grow
             colourful flowers, fruit and vegetables. The community garden started in 2006
             with just two members and with initial assistance from Rochdale
-            council's environmental team it enabled us to clean the dumping area.</p>
+            Council's environmental team it enabled us to clean the dumping area.</p>
         <p>We are a group of local residents who work together to learn and grow plants for
-                use within the community and the community garden. We started with just two
-                volunteers who were interested in growing and helping the environment but had no
-                experience.</p>
+                use within the community garden and the wider community area. We started with just two
+                volunteers who were interested in growing and helping the environment.</p>
                 
-        <p>Our aim is to encourage people to learn new skills within the garden whether it is
-                the community garden or their own garden. We encourage people within the garden
-                to take care of the environment, promote healthy life style and to encourage people
+        <p>Our aim is to encourage people to learn new skills, whether it is for use in 
+          the community garden or their own garden. We encourage people 
+          to take care of the environment, promote a healthy lifestyle and to encourage people
                 from diverse backgrounds to communicate and work together.</p>
         </div>
     </div>   
 
- <!-- Container (Volunteers Section) -->
+ <!-- Volunteers Container -->
  <div class="w3-content w3-container w3-padding-32" id="volunteers">
         <h3 class="w3-center"><span class="w3-tag">OUR VOLUNTEERS</span></h3>
         <div class="w3-container w3-center">
@@ -300,7 +275,7 @@ html {
             </div>
       </div>
        
-       <!-- enable w3 modal for full size images on click-->
+       <!-- Enable w3 modal for full size images on click-->
       <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
         <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
         <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
@@ -348,21 +323,7 @@ html {
                     </p>
             </div>
         </div>
-        <!-- cards of original 2
-        <div class="w3-container">
-            <div class="w3-card-4 w3-black" style="width:40%">
-            <div class="w3-container w3-center">
-                <h5>Person1</h5>
-                <img src="img/derek1.JPG" style="width:80%">
-            </div>
-            </div>
-            <div class="w3-card-4 w3-black" style="width:40%">
-            <div class="w3-container w3-center">
-                <h5>Person2</h5>
-                <img src="img/abdul1.jpg" style="width:80%">
-            </div>
-            </div>
-        </div> -->
+
         <!-- Container (Our Story Section) -->
         <div class="w3-content w3-container w3-padding-32" id="big_clean_up">
           <h3 class="w3-center"><span class="w3-tag">THE BIG CLEAN UP</span></h3>
@@ -390,6 +351,7 @@ html {
                     </div>
                 </div>
           </div>
+
       <!--What We Do Container-->
       <div class="w3-container" id="what_we_do">
             <div class="w3-content" style="max-width:700px">
@@ -442,8 +404,9 @@ html {
                         </div>
                     </p>
             </div>
-        </div>            
-         <!-- Plant imgs -->
+        </div>        
+
+         <!-- Plant image grid -->
          <div class="w3-content w3-container w3-padding-32" id="our_plants">
                 <h3 class="w3-center"><span class="w3-tag">OUR PLANTS</span></h3>
                 <div class="w3-container w3-center">
@@ -454,54 +417,55 @@ html {
                 <!-- Responsive Grid of images -->
                 <div class="w3-row-padding w3-center">
                   <div class="w3-col m3">
-                    <img src="img/plants1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+                    <img src="img/plants1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Plum tree">
                   </div>
               
                   <div class="w3-col m3">
-                    <img src="img/plants4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+                    <img src="img/plants4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Crab Apple tree">
                   </div>
               
                   <div class="w3-col m3">
-                    <img src="img/plants29.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+                    <img src="img/plants29.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Cherry tree">
                   </div>
                                 
                   <div class="w3-col m3">
-                        <img src="img/plants11.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+                        <img src="img/plants11.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Strawberry plant in a hanging basket">
                       </div>
                 <!--2nd row-->
                 <div class="w3-col m3">
-                    <img src="img/plants19.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+                    <img src="img/plants19.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Marigolds">
                     </div>
                 
                     <div class="w3-col m3">
-                    <img src="img/plants16.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+                    <img src="img/plants16.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sunflower">
                     </div>
                 
                     <div class="w3-col m3">
-                    <img src="img/plants27.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+                    <img src="img/plants27.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Marigolds 6-8 weeks old">
                     </div>
                                 
                     <div class="w3-col m3">
-                        <img src="img/plants26.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+                        <img src="img/plants26.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Hydrangea">
                         </div>
                     <!--3rd row-->
                     <div class="w3-col m3">
-                            <img src="img/homepage7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+                            <img src="img/homepage7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Giant Pink Lily">
                             </div>
                         
                             <div class="w3-col m3">
-                            <img src="img/plants7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+                            <img src="img/plants7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Pink Rose">
                             </div>
                         
                             <div class="w3-col m3">
-                            <img src="img/plants14.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+                            <img src="img/plants14.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Giant Yellow Lily">
                             </div>
                                         
                             <div class="w3-col m3">
-                                <img src="img/plants22.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+                                <img src="img/plants22.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Hydrangeas">
                                 </div>
                 </div>
             </div>
+
             <!--Our Funding Container-->
             <div class="w3-container" id="funding">
                     <div class="w3-content" style="max-width:700px">
@@ -534,19 +498,21 @@ html {
                             </p>
                     <p>We would like to thank <b>Rochdale Council</b> for their continuous support and funding
                             that has allowed us to continuously achieve some of our projects.</p>
-                         <!-- Responsive Singular Image -->
+                         
+                            <!-- Responsive logo images with their <p> text -->
                         <div class="w3-row-padding w3-center">
                             <img src="img/rochdale-council-logo.png" style="width:70%" alt="Rochdale Council logo.">
                         </div>
                     <p> We would also like to thank <b>eON Energy</b> for their funding support that has allowed
                             us to be self-sufficient with the power by purchasing solar panel and lighting
                             equipment for the community garden.</p>
-                        <!-- Responsive Singular Image -->
+                        
                         <div class="w3-row-padding w3-center">
                             <img src="img/eon-energy-logo.jpg" style="width:30%" alt="eON Energy logo.">
                         </div>
                     </div>
                 </div>
+
                 <!--Contact us Container-->
                 <div class="w3-container" id="contact_us">
                         <div class="w3-content" style="max-width:700px">
@@ -633,40 +599,5 @@ captionText.innerHTML = element.alt;
 }
 </script>
 <!--end image gallery-->
-<!--start smooth scroll-->
-<script>
-// let mainNavLinks = document.querySelectorAll("nav ul li a");
-// let mainSections = document.querySelectorAll("main section");
-
-// let lastId;
-// let cur = [];
-
-// // This should probably be throttled.
-// // Especially because it triggers during smooth scrolling.
-// // https://lodash.com/docs/4.17.10#throttle
-// // You could do like...
-// // window.addEventListener("scroll", () => {
-// //    _.throttle(doThatStuff, 100);
-// // });
-// // Only not doing it here to keep this Pen dependency-free.
-
-// window.addEventListener("scroll", event => {
-//   let fromTop = window.scrollY;
-
-//   mainNavLinks.forEach(link => {
-//     let section = document.querySelector(link.hash);
-
-//     if (
-//       section.offsetTop <= fromTop &&
-//       section.offsetTop + section.offsetHeight > fromTop
-//     ) {
-//       link.classList.add("current");
-//     } else {
-//       link.classList.remove("current");
-//     }
-//   });
-// });
-// </script>
-<!--end smooth scroll-->
 </body>
 </html>
