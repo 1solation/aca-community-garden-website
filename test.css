@@ -1,4 +1,7 @@
 <style>
+html {
+    scroll-behavior: smooth;
+}
 * {box-sizing: border-box;}
 body {
     font-family: Verdana, sans-serif;
@@ -19,6 +22,7 @@ button {
   position: relative;
   margin: auto;
 }
+
 /* Caption text */
 .text {
   color: #000000;
@@ -30,6 +34,7 @@ button {
   text-align: center;
   font-weight: bold
 }
+
 /* Number text (1/6 etc) */
 .numbertext {
   color: #000000;
@@ -39,6 +44,7 @@ button {
   top: 0;
   font-weight: bolder
 }
+
 /* The dots/bullets/indicators */
 .dot {
   height: 15px;
@@ -49,9 +55,11 @@ button {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+
 .active {
   background-color: #717171;
 }
+
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -59,42 +67,48 @@ button {
   animation-name: fade;
   animation-duration: 1s;
 }
+
 @-webkit-keyframes fade {
   from {opacity: .5} 
   to {opacity: 1}
 }
+
 @keyframes fade {
   from {opacity: .5} 
   to {opacity: 1}
+}
+/* .extra-pics {
+
+} */
+/* hide long images on mobile/tablet */
+@media only screen and (min-width: 0px) and (max-width: 450px) {
+    #extra-pics {
+        display: none
+    }
 }
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+/* Create two equal columns that floats next to each other */
 .column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
 }
-
- /* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+  
 /* Clear floats after the columns */
-@media screen and (max-width: 600px) {	.row:after {
-  .column {	content: "";
-      width: 100%;	display: table;
-  }	clear: both;
+.row:after {
+content: "";
+display: table;
+clear: both;
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
 .column {
-  width: 100%;
+    width: 100%;
 }
 }
- </style>
+</style>
